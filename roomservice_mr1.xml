@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="github"
+           fetch="https://github.com" />
+
+  <remote  name="evo"
+           revision = "nougat-mr1"
+           fetch="https://github.com/Evolitist" />
+
+  <remove-project name="platform/build" />
+  <project name="bacon-aosp/android_build" path="build" remote="github" revision = "nougat-mr1" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <!-- frameworks -->
+  <remove-project name="platform/frameworks/base" />
+  <project name="bacon-aosp/android_frameworks_base" path="frameworks/base" remote="github" revision = "nougat-mr1" />
+
+  <remove-project name="platform/frameworks/av" />
+  <project name="bacon-aosp/android_frameworks_av" path="frameworks/av" remote="github" revision = "nougat-mr1" />
+
+  <remove-project name="platform/frameworks/native" />
+  <project name="bacon-aosp/android_frameworks_native" path="frameworks/native" remote="github" revision = "nougat-mr1" />
+
+  <!-- hardware -->
+  <remove-project name="platform/hardware/libhardware" />
+  <project name="bacon-aosp/android_hardware_libhardware" path="hardware/libhardware" remote="github" revision="7.1.x" />
+
+  <remove-project name="platform/hardware/qcom/audio" />
+  <project name="bacon-aosp/android_hardware_qcom_audio" path="hardware/qcom/audio" remote="github" revision="7.1.x" />
+
+  <remove-project name="platform/hardware/qcom/bt" />
+  <project name="bacon-aosp/android_hardware_qcom_bt" path="hardware/qcom/bt" remote="github" revision="7.1.x" />
+
+  <remove-project name="platform/hardware/qcom/wlan" />
+  <project name="bacon-aosp/android_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="github" revision="7.1.x" />
+
+  <remove-project name="platform/hardware/qcom/display" />
+  <project name="bacon-aosp/android_hardware_qcom_display-caf" path="hardware/qcom/display-caf/msm8974" remote="github" revision="7.1.x" />
+
+  <remove-project name="platform/hardware/qcom/power" />
+  <project name="bacon-aosp/android_hardware_qcom_power" path="hardware/qcom/power" remote="github" revision="7.1.x" />
+
+  <remove-project name="platform/hardware/qcom/media" />
+  <project name="bacon-aosp/android_hardware_qcom_media-caf" path="hardware/qcom/media-caf/msm8974" remote="github" revision="7.1.x" />
+
+  <!-- system -->
+  <remove-project name="platform/system/core" />
+  <project name="bacon-aosp/android_system_core" path="system/core" remote="github" revision = "nougat-mr1" />
+
+  <remove-project name="platform/system/bt" />
+  <project name="bacon-aosp/android_system_bt" path="system/bt" remote="github" revision = "nougat-mr1" />
+
+  <remove-project name="platform/system/vold" />
+  <project name="bacon-aosp/android_system_vold" path="system/vold" remote="github" revision = "nougat-mr1" />
+
+  <!-- external -->
+  <remove-project name="platform/external/libnfc-nci" />
+  <project name="bacon-aosp//android_external_libnfc-nci" path="external/libnfc-nci" remote="github" revision="7.1.x" />
+  <remove-project name="platform/external/sqlite" />
+  <project name="bacon-aosp/android_external_sqlite" path="external/sqlite" remote="github" revision="nougat-dr1" />
+  <remove-project name="platform/external/jemalloc" />
+  <project name="bacon-aosp/android_external_jemalloc" path="external/jemalloc" remote="github" revision="nougat-dr1" />
+  
+  <!-- packages -->
+  <remove-project name="platform/packages/apps/Settings" />
+  <project name="bacon-aosp/android_packages_apps_Settings" path="packages/apps/Settings" remote="github" revision = "nougat-mr1" />
+  <project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" remote="github" revision="cm-14.1"/>
+
+  <!-- device -->
+  <project name="bacon-aosp/android_device_oneplus_bacon-aosp" path="device/oneplus/bacon" remote="github" revision = "nougat-mr1" />
+  <project name="AOSP-bacon/android_device_qcom_common" path="device/qcom/common" remote="github" revision="nougat" />
+  <project name="android_external_sony_boringssl-compat" path="external/boringssl-compat" remote="evo" />
+  <project name="SubDragonzj/android_kernel_oneplus_msm8974-aosp" path="kernel/oneplus/msm8974" remote="github" revision="nougat-mr1"/>
+  <project name="LineageOS/android_vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="github" revision="cm-14.1" />
+  <project name="bacon-aosp/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" revision = "nougat-mr1" />
+
+  <!-- remove unneeded stuff -->
+  <remove-project name="device/asus/fugu" />
+  <remove-project name="device/asus/fugu-kernel" />
+  <remove-project name="device/generic/arm64" />
+  <remove-project name="device/generic/goldfish" />
+  <remove-project name="device/generic/mips" />
+  <remove-project name="device/generic/mips64" />
+  <remove-project name="device/generic/mini-emulator-arm64" />
+  <remove-project name="device/generic/mini-emulator-mips" />
+  <remove-project name="device/generic/mini-emulator-mips64" />
+  <remove-project name="device/generic/mini-emulator-x86" />
+  <remove-project name="device/generic/mini-emulator-x86_64" />
+  <remove-project name="device/generic/x86" />
+  <remove-project name="device/generic/x86_64" />
+  <remove-project name="device/google/accessory/arduino" />
+  <remove-project name="device/google/accessory/demokit" />
+  <remove-project name="device/google/atv" />
+  <remove-project name="device/google/contexthub" />
+  <remove-project name="device/google/dragon" />
+  <remove-project name="device/google/dragon-kernel"  />
+  <remove-project name="device/htc/flounder" />
+  <remove-project name="device/htc/flounder-kernel" />
+  <remove-project name="device/huawei/angler" />
+  <remove-project name="device/huawei/angler-kernel" />
+  <remove-project name="device/intel/edison" />
+  <remove-project name="device/lge/bullhead" />
+  <remove-project name="device/lge/bullhead-kernel" />
+  <remove-project name="device/linaro/hikey" />
+  <remove-project name="device/linaro/hikey-kernel" />
+  <remove-project name="device/moto/shamu" />
+  <remove-project name="device/moto/shamu-kernel" />
+
+  <remove-project name="platform/hardware/bsp/intel" />
+  <remove-project name="platform/hardware/google/apf"  />
+  <remove-project name="platform/hardware/intel/audio_media"  />
+  <remove-project name="platform/hardware/intel/bootstub"  />
+  <remove-project name="platform/hardware/intel/common/bd_prov"  />
+  <remove-project name="platform/hardware/intel/common/libmix"  />
+  <remove-project name="platform/hardware/intel/common/libstagefrighthw"  />
+  <remove-project name="platform/hardware/intel/common/libva"  />
+  <remove-project name="platform/hardware/intel/common/libwsbm"  />
+  <remove-project name="platform/hardware/intel/common/omx-components"  />
+  <remove-project name="platform/hardware/intel/common/utils"  />
+  <remove-project name="platform/hardware/intel/common/wrs_omxil_core"  />
+  <remove-project name="platform/hardware/intel/img/hwcomposer"  />
+  <remove-project name="platform/hardware/intel/img/psb_headers"  />
+  <remove-project name="platform/hardware/intel/img/psb_video"  />
+  <remove-project name="platform/hardware/intel/sensors"  />
+  <remove-project name="platform/hardware/marvell/bt"  />
+  <remove-project name="platform/hardware/ti/omap3"  />
+  <remove-project name="platform/hardware/ti/omap4-aah"  />
+  <remove-project name="platform/hardware/ti/omap4xxx"  />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9"  />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9"  />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1"  />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9"  />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9"  />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"  />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8"  />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8"  />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9"  />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9"  />
+  <remove-project name="platform/prebuilts/gdb/darwin-x86"  />
+  <remove-project name="platform/prebuilts/go/darwin-x86"  />
+  <remove-project name="platform/prebuilts/ninja/darwin-x86"  />
+  <remove-project name="platform/prebuilts/python/darwin-x86/2.7.5"  />
+</manifest>
