@@ -65,7 +65,6 @@
   <!-- packages -->
   <remove-project name="platform/packages/apps/Settings" />
   <project name="bacon-aosp/android_packages_apps_Settings" path="packages/apps/Settings" remote="github" revision = "nougat-mr1" />
-  <project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" remote="github" revision="cm-14.1"/>
 
   <!-- device -->
   <project name="bacon-aosp/android_device_oneplus_bacon-aosp" path="device/oneplus/bacon" remote="github" revision = "nougat-mr1" />
