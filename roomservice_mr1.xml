@@ -142,4 +142,5 @@
   <remove-project name="platform/prebuilts/python/darwin-x86/2.7.5"  />
 
   <remove-project name="packages/apps/Camera2" />
+  <remove-project name="packages/apps/DeskClock" />
 </manifest>
